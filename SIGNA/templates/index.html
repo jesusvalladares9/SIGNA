@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src= "{{ url_for('static', filename='icons/Logo.png') }}" alt="Logo de SIGNA">
+        </div>
+        <div class="conference-info">
+            <h1>Presentación Lenguaje de señas</h1>
+            <p id="conference-date"  style="text-align: center;"></p>
+        </div>
+
+        <div class="user-profile">
+            <img src="{{ url_for('static', filename='icons/perfil.png') }}" alt="Foto de Perfil" class="profile-pic">
+            <div class="user-details">
+                <span class="user-name">Margarita Melo</span>
+                <span class="user-role">Moderador</span>
+            </div>
+        </div>
+
+
+
+    </header>
+
+    <main>
+        <div class="presenter-screen">
+            <div class="presenter-video rounded-border">
+                <img src="{{ url_for('video_feed') }}" alt="Video Feed" width="920px" height="500px">
+            </div>            
+            
+            <div class="participants">
+                <div class="participant">
+                    <img src="{{ url_for('static', filename='icons/mj.png') }}" alt="Maria Jaqueline">
+                    <div class="participant-info">
+                        <p>Maria Jaqueline</p>
+                        <img src="{{ url_for('static', filename='icons/microfonodes.png') }}" alt="Micrófono" class="mic-icon">
+                    </div>
+                </div>
+                <div class="participant">
+                    <img src="{{ url_for('static', filename='icons/mr.png') }}" alt="Angel Ronaldo">
+                    <div class="participant-info">
+                        <p>Melissa Rangel</p>
+                        <img src="{{ url_for('static', filename='icons/microfonoac.png') }}" alt="Micrófono" class="mic-icon">
+                    </div>
+                </div>
+                <div class="participant">
+                    <img src="{{ url_for('static', filename='icons/ra.png') }}" alt="Rogelio Aguado">
+                    <div class="participant-info">
+                        <p>Rogelio Aguado</p>
+                        <img src="{{ url_for('static', filename='icons/microfonoac.png') }}" alt="Micrófono" class="mic-icon">
+                    </div>
+                </div>
+                <div class="participant">
+                    <img src="{{ url_for('static', filename='icons/ar.png') }}" alt="Diego Gracia Cruz">
+                    <div class="participant-info">
+                        <p>Angel Ronaldo</p>
+                        <img src="{{ url_for('static', filename='icons/microfonodes.png') }}" alt="Micrófono" class="mic-icon">
+                    </div>
+                </div>
+                <!-- Agregar más participantes según sea necesario -->
+            </div>
+            
+        </div>
+        <aside>
+            <div class="participants-info">
+                <h2>Participantes</h2>
+                <div class="participant-card">
+                    <img src="{{ url_for('static', filename='icons/perf1.png') }}" alt="Perfil" class="profile-pic">
+                    <div class="participant-details">
+                        <span class="participant-name">Maria Jaqueline</span>
+                            <img src="{{ url_for('static', filename='icons/microac.png') }}" alt="Cámara" class="icon">
+                            <img src="{{ url_for('static', filename='icons/camarades.png') }}" alt="Micrófono" class="icon">
+                    </div>
+                </div>
+                <div class="participant-card">
+                    <img src="{{ url_for('static', filename='icons/perf2.png') }}" alt="Perfil" class="profile-pic">
+                    <div class="participant-details">
+                        <span class="participant-name">Angel Ronaldo</span>
+                            <img src="{{ url_for('static', filename='icons/microdes.png') }}" alt="Cámara" class="icon">
+                            <img src="{{ url_for('static', filename='icons/camarac.png') }}" alt="Micrófono" class="icon">
+                    </div>
+                </div>
+                <div class="participant-card">
+                    <img src="{{ url_for('static', filename='icons/perf3.png') }}" alt="Perfil" class="profile-pic">
+                    <div class="participant-details">
+                        <span class="participant-name">Rogelio Aguado</span>
+                            <img src="{{ url_for('static', filename='icons/microdes.png') }}" alt="Cámara" class="icon">
+                            <img src="{{ url_for('static', filename='icons/camarades.png') }}" alt="Micrófono" class="icon">
+                    </div>
+                </div>
+
+
+
+    <!-- Separador para el chat -->
+    <hr class="chat-divider">
+    
+    <div class="chat">
+        <h2>Chat</h2>
+        
+        <div class="chat-comments">
+            <div class="comment">
+                <img src="{{ url_for('static', filename='icons/perf1.png') }}" alt="Perfil" class="chat-profile-pic">
+                <div class="comment-content">
+                    <span class="comment-author">Maria Jaqueline</span>
+                    <p class="comment-text">Hola a todos, ¿cómo están?</p>
+                </div>
+            </div>
+    
+            <div class="comment">
+                <img src="{{ url_for('static', filename='icons/perf2.png') }}" alt="Perfil" class="chat-profile-pic">
+                <div class="comment-content">
+                    <span class="comment-author">Angel Ronaldo</span>
+                    <p class="comment-text">Todo bien, gracias. ¿Y tú?</p>
+                </div>
+            </div>
+    
+            <div class="comment">
+                <img src="{{ url_for('static', filename='icons/perf3.png') }}" alt="Perfil" class="chat-profile-pic">
+                <div class="comment-content">
+                    <span class="comment-author">Rogelio Aguado</span>
+                    <p class="comment-text">Estoy listo para la reunión.</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="chat-input">
+            <input type="text" placeholder="Escribe algo...">
+            <button type="submit">
+                <img src="{{ url_for('static', filename='icons/enviar.png') }}" alt="Enviar">
+            </button>
+        </div>
+    </div>
+    
+
+
+
+
+
+            </div>
+            
+
+        </aside>
+    </main>
+
+<footer>
+        <button class="call-button button-microphone"><img src="{{ url_for('static', filename='icons/microfono.png') }}" /></button>
+        <button class="call-button button-camera"><img src="{{ url_for('static', filename='icons/camara.png') }}" /></button>
+        <button class="call-button button-present"><img src="{{ url_for('static', filename='icons/presentar.png') }}" /></button>
+        <button class="call-button button-record"><img src="{{ url_for('static', filename='icons/Grabar.png') }}" /></button>
+        <button class="call-button button-chat"><img src="{{ url_for('static', filename='icons/comentar.png') }}" /></button>
+        <button class="call-button button-more-options"><img src="{{ url_for('static', filename='icons/más.png') }}" /></button>
+        <button class="call-button button-end-call">Finalizar
+        
+        </button>
+    </footer>
+    
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

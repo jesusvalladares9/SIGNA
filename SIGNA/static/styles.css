@@ -1,0 +1,442 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px; /* Reduce el padding para disminuir la altura del header */
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e0e0e0; /* Reducido el grosor de la línea divisoria */
+    height: 60px; /* Fija una altura específica si es necesario */
+}
+
+header .logo img {
+    width: 120px;
+    height: 40px;
+}
+
+header .conference-info h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+header .conference-info p {
+    font-size: 12px;
+    margin: 0;
+}
+
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0; /* Color de fondo del perfil */
+    padding: 5px 10px; /* Reduce el padding interno para hacer el perfil más compacto */
+    border-radius: 20px; /* Esquinas muy redondeadas */
+    border: 1px solid #BDBDBD;
+    width: 200px; /* Ajusta el ancho según sea necesario */
+    margin: 20px; /* Añade un margen para separar del borde */
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Imagen circular */
+    margin-right: 15px; /* Espacio entre la imagen y el texto */
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.user-role {
+    font-size: 12px;
+    color: #888; /* Color gris para el rol */
+}
+
+
+
+
+main {
+    display: flex;
+    padding: 20px;
+}
+
+.rounded-border {
+    border-radius: 15px; /* Ajusta este valor según el radio de redondeo deseado */
+    overflow: hidden; /* Para asegurar que el contenido respete el borde redondeado */
+}
+
+
+.presenter-screen {
+    flex: 3;
+    margin-right: 20px;
+}
+
+.presenter-video video {
+    width: 916px;
+    height: 515px;
+    border: 2px solid #424242;
+    border-radius: 10px;
+}
+
+.participants {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.participant {
+    position: relative; /* Para posicionar el contenedor de información */
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.participant img {
+    width: 217.5px;
+    height: 122px;
+    border-radius: 5px;
+}
+
+.participant-info {
+    position: absolute;
+    bottom: 10px; /* Ajusta según sea necesario */
+    left: 5px; /* Ajusta según sea necesario */
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente */
+    border-radius: 5px; /* Bordes redondeados en todo el rectángulo */
+    padding: 3px 8px; /* Espacio interno alrededor del texto */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total */
+    white-space: nowrap; /* Evita el salto de línea */
+    border: none; /* Asegúrate de que no tenga borde */
+}
+
+.participant-info p {
+    font-size: 12px;
+    color: #424242;
+    margin: 0;
+}
+
+.mic-icon {
+    width: 30px !important; /* Tamaño del ícono */
+    height: 30px !important; /* Tamaño del ícono */
+    border-radius: 50%; /* Circular */
+    position: absolute;
+    bottom: 1px; /* Espacio desde el borde inferior */
+    left: 170px; /* Espacio desde el borde izquierdo */
+    right: 2px;
+    background-color: transparent; /* Sin fondo */
+    border: none; /* Sin borde */
+    box-shadow: none; /* Sin sombra */
+}
+
+
+
+
+
+aside {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+
+
+
+
+
+
+.participants-info {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #BDBDBD;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+
+    height: 100%; /* Asegura que ocupe toda la altura del contenedor padre */
+}
+
+
+
+.participant-card {
+    font-size: 9px; /* Ajusta este valor según lo que necesites */
+    display: flex;
+    align-items: center;
+    background-color: #f7f7f7;
+    padding: 10px;
+    border-radius: 20px; /* Bordes más redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.participant-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.participant-name {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+}
+
+.participant-icons .icon {
+    width: 10px;
+    height: 10px;
+    margin-left: 10px;
+}
+
+
+
+
+.chat {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Asegúrate de que el contenedor ocupe toda la altura disponible */
+
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #BDBDBD;
+    margin-top: 20px; /* Espacio entre la línea divisoria y el chat */
+}
+
+.chat-divider {
+    border: none;
+    border-top: 1px solid #ccc; /* Color de la línea divisoria */
+    margin: 20px 0; /* Espacio vertical alrededor de la línea */
+}
+
+.chat h2 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.chat-comments {
+    margin-bottom: 5px; /* Reduce el espacio inferior */
+    max-height: 150px; /* Reduce la altura máxima del contenedor */
+    overflow-y: auto; /* Mantiene el desplazamiento vertical si los comentarios son más largos */
+    padding: 10px; /* Opcional: ajusta el padding para un diseño más compacto */
+}
+
+.comment {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.chat-profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.comment-content {
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    max-width: 80%; /* Ajusta según el espacio que quieras usar */
+}
+
+.comment-author {
+    font-size: 10px;
+    color: #888;
+    margin-bottom: 2px;
+}
+
+.comment-text {
+    font-size: 12px;
+    color: #333;
+}
+
+.chat-input {
+    display: flex;
+    align-items: center;
+    border-radius: 25px; /* Bordes redondeados para todo el contenedor */
+    border: 1px solid #BDBDBD;
+    background-color: #fff;
+    overflow: hidden; /* Asegúrate de que el botón se ajuste al borde redondeado del contenedor */
+    margin-top: auto; /* Empuja el input al final del contenedor */
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none; /* Elimina el borde para que no interfiera con el contenedor */
+    border-radius: 25px; /* Bordes redondeados del campo de texto */
+    outline: none; /* Elimina el contorno del campo de texto al hacer foco */
+}
+
+.chat-input button {
+    width: 35px; /* Ajusta el tamaño del botón según sea necesario */
+    height: 35px; /* Ajusta el tamaño del botón según sea necesario */
+    padding: 0; /* Elimina el padding para que el tamaño sea uniforme */
+    border: none;
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 50%; /* Bordes redondeados para el botón */
+    cursor: pointer;
+    margin-left: 5px; /* Espacio entre el campo de texto y el botón */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el icono dentro del botón */
+}
+
+.chat-input button img {
+    width: 20px; /* Ajusta el tamaño del icono */
+    height: 20px; /* Ajusta el tamaño del icono */
+}
+
+
+
+
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: #f8f8f8;
+    border-top: 2px solid #e0e0e0;
+}
+
+footer .call-button {
+    width: 42.8px;
+    height: 42.8px;
+    margin: 0 10px;
+    border-radius: 50%;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+
+/* Botón Finalizar Llamada: Rojo */
+footer .button-end-call {
+    background-color: #f44336; /* Rojo */
+    border-radius: 20px;
+    color: #ffffff;
+    padding: 10px 40px; /* Aumenta el padding horizontalmente */
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 140px; /* Margen para separar el botón de los demás */
+    transition: background-color 0.3s;
+}
+
+footer .button-end-call:hover {
+    background-color: #d32f2f;
+}
+
+
+
+
+
+footer .call-button:hover {
+    background-color: #0056b3;
+}
+
+/* Botón 1 y 2: Azul */
+footer .button-microphone,
+footer .button-camera {
+    background-color: #007bff;
+}
+
+footer .button-microphone:hover,
+footer .button-camera:hover {
+    background-color: #0056b3;
+}
+
+/* Botón 3: Azul más bajo */
+footer .button-present {
+    background-color: #b6d4ef;
+}
+
+footer .button-present:hover {
+    background-color: #468bb0;
+}
+
+/* Botón 4: Rojo bajo */
+footer .button-record {
+    background-color: #e29e9e;
+}
+
+footer .button-record:hover {
+    background-color: #d32f2f;
+}
+
+/* Botón 5 y 6: Azul más bajo */
+footer .button-chat,
+footer .button-more-options {
+    background-color: #b6d4ef;
+}
+
+footer .button-chat:hover,
+footer .button-more-options:hover {
+    background-color: #468bb0;
+}
+
+/* Tamaño específico de los iconos */
+.footer .button-microphone img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer .button-camera img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer .button-present img {
+    width: 20px;  /* Ajusta el tamaño específico */
+    height: 20px;
+}
+
+.footer .button-record img {
+    width: 22px;  /* Ajusta el tamaño específico */
+    height: 22px;
+}
+
+.footer .button-chat img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer .button-more-options img {
+    width: 20px;
+    height: 60px;
+}
+
+
